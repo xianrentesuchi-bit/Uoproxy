@@ -8,7 +8,7 @@ function encode(url) {
 
 function decode(encoded) {
   try {
-    const raw = encoded.replace(PREFIX, '');
+    const raw = encoded.startsWith(PREFIX) ? encoded.slice(PREFIX.length) : encoded;
     return Buffer.from(raw, 'base64url').toString('utf8');
   } catch {
     return null;
