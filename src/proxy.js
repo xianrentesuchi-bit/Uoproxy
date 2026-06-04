@@ -33,14 +33,13 @@ function collectBody(stream) {
 }
 
 async function handleProxy(req, res) {
-  const urlPath = req.url;
+  const urlPath = req.url.split('?')[0];
 
-  if (!isEncoded(urlPath.slice(1) === '' ? '' : urlPath)) {
+  if (!isEncoded(urlPath)) {
     return false;
   }
 
-  const encoded = urlPath.slice(1);
-  const targetUrl = decode(encoded);
+  const targetUrl = decode(urlPath);
 
   if (!targetUrl) {
     res.writeHead(400, { 'content-type': 'text/plain' });
