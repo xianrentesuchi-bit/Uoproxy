@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UoProxy</title>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <h1 class="logo">UoProxy</h1>
+  <p class="tagline">うおw</p>
+
+  <div class="search-card">
+    <div class="input-row">
+      <input
+        id="url-input"
+        type="text"
+        placeholder="URLまたはキーワードを入力..."
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button id="go-btn">移動</button>
+    </div>
+    <p id="error-msg" class="error-msg"></p>
+    <div class="shortcuts">
+      <button class="shortcut-btn" data-url="https://google.com">Google</button>
+      <button class="shortcut-btn" data-url="https://youtube.com">YouTube</button>
+      <button class="shortcut-btn" data-url="https://wikipedia.org">Wikipedia</button>
+      <button class="shortcut-btn" data-url="https://github.com">GitHub</button>
+      <button class="shortcut-btn" data-url="https://reddit.com">Reddit</button>
+    </div>
+  </div>
+
+  <p class="footer">uoproxy — web proxy service</p>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
